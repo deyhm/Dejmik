@@ -2,17 +2,9 @@ const Discord = require('discord.js');
 const { prefix, token } = require('./config.json');
 const bot = new Discord.Client();
 
-bot.on('ready', () => {
-  console.log(`Bot dziala!`);
-
-  bot.user.setStatus('available')
-    bot.user.setPresence({
-        game: {
-            name: 'XD',
-        }
-    });
+bot.on('ready', () => { 
+	console.log('BOT ONLINE');
 });
-
 
 
 bot.on('message', msg => {
@@ -28,7 +20,4 @@ bot.on('message', msg => {
 });
 
 
-});
-
-
-bot.login(process.env.BOT_TOKEN);
+bot.login(token);
