@@ -27,12 +27,8 @@ bot.on('message', msg => {
 	}
 });
 
-bot.on('message', msg => {
-    const taggedUser = message.mentions.users.first();
-
-
 
 });
 
 
-bot.login(token);
+bot.login(process.env.BOT_TOKEN);
